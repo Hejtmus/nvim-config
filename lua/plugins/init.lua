@@ -26,7 +26,7 @@ return {
         "css-lsp",
         "json-lsp",
         "svelte-language-server",
-        "tailwind-language-server",
+        "tailwindcss-language-server",
         "js-debug-adapter",
         "eslint_d",
         "htmlhint",
