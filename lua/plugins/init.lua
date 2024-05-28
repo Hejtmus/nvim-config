@@ -6,33 +6,104 @@ return {
       require "configs.conform"
     end,
   },
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("nvchad.configs.lspconfig").defaults()
+      require "configs.lspconfig"
+    end,
+  },
 
-  -- These are some examples, uncomment them if you want to see them work!
+  {
+  	"williamboman/mason.nvim",
+  	opts = {
+  		ensure_installed = {
+        -- vim
+  			"lua-language-server",
+        "stylua",
+        -- web
+  			"html-lsp",
+        "css-lsp",
+        "json-lsp",
+        "svelte-language-server",
+        "tailwind-language-server",
+        "js-debug-adapter",
+        "eslint_d",
+        "htmlhint",
+        "standardjs",
+        "ts-standard",
+        -- other
+        "markdownlint",
+        "prettier"
+  		},
+  	},
+  },
+  {
+  	"nvim-treesitter/nvim-treesitter",
+  	opts = {
+  		ensure_installed = {
+        -- vim
+  			"vim",
+        "lua",
+        "vimdoc",
+        -- web
+        "html",
+        "css",
+        "scss",
+        "javascript",
+        "jsdoc",
+        "json",
+        "svelte",
+        "typescript",
+        -- low-level
+        "c",
+        "cpp",
+        "cmake",
+        "make",
+        -- system,
+        "bash",
+        -- other
+        "latex",
+        "markdown"
+  		},
+  	},
+  },
+  {
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim",         -- required
+      "sindrets/diffview.nvim",        -- optional - Diff integration
+
+      "nvim-telescope/telescope.nvim", -- optional
+    },
+    lazy = false,
+    config = true
+  },
+  {
+    "pocco81/auto-save.nvim",
+    lazy = false
+  },
+  {
+    "github/copilot.vim",
+    lazy = false
+  },
+  {
+    "ThePrimeagen/vim-be-good",
+    lazy = false
+  }
   -- {
-  --   "neovim/nvim-lspconfig",
+  --   'dense-analysis/ale',
+  --   lazy = false,
   --   config = function()
-  --     require("nvchad.configs.lspconfig").defaults()
-  --     require "configs.lspconfig"
-  --   end,
-  -- },
+  --       -- Configuration goes here.
+  --       local g = vim.g
   --
-  -- {
-  -- 	"williamboman/mason.nvim",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"lua-language-server", "stylua",
-  -- 			"html-lsp", "css-lsp" , "prettier"
-  -- 		},
-  -- 	},
-  -- },
+  --       g.ale_linters = {
+  --           lua = {'lua_language_server'},
+  --           javascript = {'eslint'},
+  --           typescript = {'eslint'}
+  --       }
   --
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  --   end
+  -- }
 }
