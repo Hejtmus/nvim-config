@@ -8,6 +8,7 @@ local servers = {
   "tsserver",
   "html",
   "cssls",
+  "clangd",
   "svelte",
   "tailwindcss",
   "bashls",
@@ -32,6 +33,7 @@ lspconfig.tsserver.setup {
 
 lspconfig.html.setup{}
 lspconfig.cssls.setup{}
+lspconfig.clangd.setup{}
 lspconfig.svelte.setup{}
 lspconfig.tailwindcss.setup{}
 lspconfig.bashls.setup{}

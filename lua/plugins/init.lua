@@ -34,7 +34,8 @@ return {
         "ts-standard",
         -- other
         "markdownlint",
-        "prettier"
+        "prettier",
+        "clangd"
   		},
   	},
   },
