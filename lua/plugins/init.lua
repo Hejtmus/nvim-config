@@ -31,7 +31,7 @@ return {
         "eslint_d",
         "htmlhint",
         "standardjs",
-        "ts-standard",
+        "typescript-language-server",
         -- other
         "markdownlint",
         "prettier",
